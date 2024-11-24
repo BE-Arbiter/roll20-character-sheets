@@ -1,9 +1,18 @@
 const {src, dest, watch, series} = require('gulp')
 const include = require('gulp-include')
 const rename = require('gulp-rename')
+const pug = require('gulp-pug')
 
 
 /* TODO: Idea V4 Before Generating html, generate pug template into html to reuse the same code for several place in the application */
+function pug_compile_pc(done) {
+    src('./pug/*/*.pug')
+        .pipe(pug({
+            pretty: true,
+        }))
+        .pipe(dest('../dist/pug'));
+    done();
+}
 /* Bundle the html in one big file, including the js file compilated earlier */
 function bundle_html(done){
     src('html/main.html')
@@ -33,6 +42,7 @@ function copy_to_root_dir(done){
 }
 
 exports.default = series(
+    pug_compile_pc,
     bundle_css,
     bundle_html
 );

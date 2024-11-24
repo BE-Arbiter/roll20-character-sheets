@@ -1,0 +1,34 @@
+- var attrs = ["strength","dexterity","constitution","intelligence","wisdom","charisma"]
+div.attributes
+    each attr in attrs
+        div.attribute
+            button(
+                type=`roll`
+                name=`roll_${attr}`
+                value=`@{wtype}&{template:simple} {{rname=^{${attr}-u}}} {{mod=@{${attr}_mod}@{jack_bonus}}} {{r1=[[@{d20}+@{${attr}_mod}@{jack_attr}[STR]]]}} @{rtype}+@{${attr}_mod}@{jack_attr}[STR]]]}} @{charname_output}`
+                data-i18n=`${attr}-u`
+            ) ${attr}
+            span.mod(
+                name=`attr_${attr}_mod`
+                title=`@{${attr}_mod}`
+            ) 0
+            div.base
+                input.base(
+                    type=`text`
+                    name=`attr_${attr}_base`
+                    title=`@{${attr}}`
+                    value=`10`
+                )
+                input(
+                    type=`hidden`
+                    name=`attr_${attr}`
+                    value=`10`
+                )
+                input.flag(
+                    type=`hidden`
+                    name=`attr_${attr}_flag`
+                    value=`0`
+                )
+                span.final(
+                    name=`attr_${attr}`
+                )
