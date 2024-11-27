@@ -1,0 +1,189 @@
+<input class="npc_options-flag" type="checkbox" name="attr_npc_options-flag" checked="checked">
+<span>y</span>
+<div class="npc-options">
+    <!-- General Options -->
+    <div class="npc-options-container">
+        <label class="title">
+            <span data-i18n="npc-options-u">NPC OPTIONS</span>
+        </label>
+        <div class="npc-options-row">
+            <span data-i18n="name-u">NAME</span>
+            <input type="text" name="attr_npc_name">
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="npc-type-u">NPC TYPE</span>
+            <input type="text" name="attr_npc_type" placeholder="Medium fiend, any evil alignment"
+                   data-i18n-placeholder="npc-type-place">
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="armor-class-u">ARMOR CLASS</span>
+            <input type="text" name="attr_npc_ac" placeholder="10">
+            <span data-i18n="type-u">TYPE</span>
+            <input type="text" name="attr_npc_actype" placeholder="scale mail" data-i18n-placeholder="npc-armor-place"
+                   value="">
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="hit-points-u">HIT POINTS</span>
+            <input type="number" name="attr_hp" placeholder="82">
+            <span class="separator">/</span>
+            <input type="number" name="attr_hp_max" placeholder="82">
+            <span data-i18n="formula-u">FORMULA</span>
+            <input type="text" name="attr_npc_hpformula" placeholder="11d8 + 33">
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="speed-u">SPEED</span>
+            <input type="text" name="attr_npc_speed" placeholder="30 ft., fly 60ft."
+                   data-i18n-placeholder="npc-speed-place">
+        </div>
+        <hr>
+        <div class="npc-options-row subtitle">
+            <span data-i18n="attributes-u">ATTRIBUTES</span>
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="str-u">STR</span>
+            <input type="number" name="attr_strength_base" value="10">
+            <span data-i18n="dex-u">DEX</span>
+            <input type="number" name="attr_dexterity_base" value="10">
+            <span data-i18n="con-u">CON</span>
+            <input type="number" name="attr_constitution_base" value="10">
+            <span data-i18n="int-u">INT</span>
+            <input type="number" name="attr_intelligence_base" value="10">
+            <span data-i18n="wis-u">WIS</span>
+            <input type="number" name="attr_wisdom_base" value="10">
+            <span data-i18n="cha-u">CHA</span>
+            <input type="number" name="attr_charisma_base" value="10">
+        </div>
+        <hr>
+        <div class="npc-options-row subtitle">
+            <span data-i18n="saves-u">SAVES</span>
+        </div>
+        <div class="npc-options-row">
+            <span data-i18n="str-u">STR</span>
+            <input type="number" name="attr_npc_str_save_base" placeholder="0">
+            <span data-i18n="dex-u">DEX</span>
+            <input type="number" name="attr_npc_dex_save_base" placeholder="0">
+            <span data-i18n="con-u">CON</span>
+            <input type="number" name="attr_npc_con_save_base" placeholder="0">
+            <span data-i18n="int-u">INT</span>
+            <input type="number" name="attr_npc_int_save_base" placeholder="0">
+            <span data-i18n="wis-u">WIS</span>
+            <input type="number" name="attr_npc_wis_save_base" placeholder="0">
+            <span data-i18n="cha-u">CHA</span>
+            <input type="number" name="attr_npc_cha_save_base" placeholder="0">
+            <input type="hidden" name="attr_npc_str_save" value="@{strength_mod}">
+            <input type="hidden" name="attr_npc_dex_save" value="@{dexterity_mod}">
+            <input type="hidden" name="attr_npc_con_save" value="@{constitution_mod}">
+            <input type="hidden" name="attr_npc_int_save" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_wis_save" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_cha_save" value="@{charisma_mod}">
+        </div>
+        <hr>
+        <div class="npc-options-row subtitle">
+            <span data-i18n="skills-u">SKILLS</span>
+        </div>
+        <div class="npc-options-row skills" data-i18n-list="skills-list">
+            <div class="flex-col flex-w-4">
+                <div class="npc-options-row" data-i18n-list-item="acrobatics">
+                    <span data-i18n="acrobatics-u">ACROBATICS</span>
+                    <input type="number" name="attr_npc_acrobatics_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="animal_handling">
+                    <span data-i18n="animal_handling-u">ANIMAL HANDLING</span>
+                    <input type="number" name="attr_npc_animal_handling_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="athletics">
+                    <span data-i18n="athletics-u">ATHLETICS</span>
+                    <input type="number" name="attr_npc_athletics_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="deception">
+                    <span data-i18n="deception-u">DECEPTION</span>
+                    <input type="number" name="attr_npc_deception_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="insight">
+                    <span data-i18n="insight-u">INSIGHT</span>
+                    <input type="number" name="attr_npc_insight_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="intimidation">
+                    <span data-i18n="intimidation-u">INTIMIDATION</span>
+                    <input type="number" name="attr_npc_intimidation_base" placeholder="0">
+                </div>
+            </div>
+            <div class="flex-col flex-w-4" data-i18n-list-sublist>
+                <div class="npc-options-row" data-i18n-list-item="investigation">
+                    <span data-i18n="investigation-u">INVESTIGATION</span>
+                    <input type="number" name="attr_npc_investigation_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="lore">
+                    <span data-i18n="lore-u">LORE</span>
+                    <input type="number" name="attr_npc_lore_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="medicine">
+                    <span data-i18n="medicine-u">MEDICINE</span>
+                    <input type="number" name="attr_npc_medicine_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="nature">
+                    <span data-i18n="nature-u">NATURE</span>
+                    <input type="number" name="attr_npc_nature_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="perception">
+                    <span data-i18n="perception-u">PERCEPTION</span>
+                    <input type="number" name="attr_npc_perception_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="performance">
+                    <span data-i18n="performance-u">PERFORMANCE</span>
+                    <input type="number" name="attr_npc_performance_base" placeholder="0">
+                </div>
+            </div>
+            <div class="flex-col flex-w-4" data-i18n-list-sublist>
+                <div class="npc-options-row" data-i18n-list-item="persuasion">
+                    <span data-i18n="persuasion-u">PERSUASION</span>
+                    <input type="number" name="attr_npc_persuasion_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="piloting">
+                    <span data-i18n="piloting-u">PILOTING</span>
+                    <input type="number" name="attr_npc_piloting_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="sleight_of_hand">
+                    <span data-i18n="sleight_of_hand-u">SLEIGHT OF HAND</span>
+                    <input type="number" name="attr_npc_sleight_of_hand_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="stealth">
+                    <span data-i18n="stealth-u">STEALTH</span>
+                    <input type="number" name="attr_npc_stealth_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="survival">
+                    <span data-i18n="survival-u">SURVIVAL</span>
+                    <input type="number" name="attr_npc_survival_base" placeholder="0">
+                </div>
+                <div class="npc-options-row" data-i18n-list-item="technology">
+                    <span data-i18n="technology-u">TECHNOLOGY</span>
+                    <input type="number" name="attr_npc_technology_base" placeholder="0">
+                </div>
+            </div>
+            <input type="hidden" name="attr_npc_acrobatics" value="@{dexterity_mod}">
+            <input type="hidden" name="attr_npc_animal_handling" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_athletics" value="@{strength_mod}">
+            <input type="hidden" name="attr_npc_deception" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_insight" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_intimidation" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_investigation" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_lore" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_medicine" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_nature" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_perception" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_performance" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_persuasion" value="@{charisma_mod}">
+            <input type="hidden" name="attr_npc_piloting" value="@{intelligence_mod}">
+            <input type="hidden" name="attr_npc_sleight_of_hand" value="@{dexterity_mod}">
+            <input type="hidden" name="attr_npc_stealth" value="@{dexterity_mod}">
+            <input type="hidden" name="attr_npc_survival" value="@{wisdom_mod}">
+            <input type="hidden" name="attr_npc_technology" value="@{intelligence_mod}">
+        </div>
+    </div>
+    <!-- Import / Export -->
+    <div class="npc-options-container">
+        <label class="title">
+            <span data-i18n="npc-import-export-u">IMPORT / EXPORT</span>
+        </label>
+    </div>
+</div>

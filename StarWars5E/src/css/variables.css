@@ -1,0 +1,17 @@
+:root {
+    /*
+     Main Color  Black
+     Text Color Black
+     Accent Color Red
+     Utility
+     */
+    --background: linear-gradient(to right, #afc6d6 0%, #d6d6d6 30%, #d6d6d6 70%, #afc6d6 100%);
+    --color-background-transparent: rgba(255,255,255,0.7);
+
+    --color-alpha : #000000;
+    --color-beta : #AA0000;
+    --color-gamma-light: #A0A0A0;
+
+    --color-text: #000000;
+
+}
