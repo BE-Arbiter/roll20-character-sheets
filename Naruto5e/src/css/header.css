@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+
+    .left {
+        width: 25%;
+    }
+
+    .scroll {
+        width: 3.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .scroll .scroll-border {
+        background: linear-gradient(to right, var(--color-alpha), var(--color-alpha-dark), var(--color-alpha));
+        width: 100%;
+        border: 0.1rem solid black;
+        height: 1.75rem;
+    }
+
+    .scroll .scroll-inside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        background: linear-gradient(to right, var(--color-bg-alpha-dark), var(--color-bg-alpha), var(--color-bg-alpha-dark));
+        width: 100%;
+        border: 0.1rem solid black;
+        border-top: 0.25rem solid var(--color-gamma);
+        border-bottom: 0.25rem solid var(--color-gamma);
+    }
+
+    .scroll .scroll-tip {
+        height: 1rem;
+        background-color: black;
+        background: linear-gradient(to right, var(--color-bg-beta-dark), var(--color-bg-beta), var(--color-bg-beta-dark));
+        width: 50%;
+    }
+
+    .scroll .top {
+        border-radius: 25% 25% 0 0 / 0.5rem 0.5rem 0 0;
+    }
+
+    .scroll .bottom {
+        border-radius: 0 0 25% 25% / 0 0 0.5rem 0.5rem;
+    }
+
+    .header-info {
+        margin: 1rem 0 1rem -1rem;
+        padding: 0.5rem 0.2rem 0.2rem 1.2rem;
+        flex: 1;
+        border: 0.1rem solid black;
+
+        background: linear-gradient(to right, var(--color-bg-alpha-dark), var(--color-bg-alpha), var(--color-bg-alpha-dark));
+    }
+}

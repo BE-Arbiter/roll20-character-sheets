@@ -1,0 +1,10 @@
+.ui-dialog .tab-content .charsheet {
+    * {
+        box-sizing: border-box
+    }
+
+    /*=include var.css*/
+    /*=include flex.css*/
+    /*=include header.css*/
+    /*=include pc.css*/
+}

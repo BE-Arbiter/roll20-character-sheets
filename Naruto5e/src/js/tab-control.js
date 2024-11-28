@@ -1,0 +1,12 @@
+on("clicked:pc-bio",()=>{
+    setAttrs({"current-tab-pc":"bio"});
+});
+on("clicked:pc-core",()=>{
+    setAttrs({"current-tab-pc":"core"});
+});
+on("clicked:pc-jutsu",()=>{
+    setAttrs({"current-tab-pc":"jutsu"});
+});
+on("clicked:pc-config",()=>{
+    setAttrs({"current-tab-pc":"config"});
+});
